@@ -1,0 +1,41 @@
+<!-- item_steps_history.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewStepsHistoryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2023-04-28" />
+
+    <TextView
+        android:id="@+id/textViewStepsHistorySteps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/textViewStepsHistoryDate"
+        app:layout_constraintTop_toTopOf="@id/textViewStepsHistoryDate"
+        tools:text="1500 steps" />
+
+    <ProgressBar
+        android:id="@+id/progressBarStepsHistory"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progressBackgroundTint="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewStepsHistoryDate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

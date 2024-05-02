@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AnalyticsActivity">
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="0dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/celbox" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="0dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toStartOf="@id/imageView11"
+        app:layout_constraintStart_toStartOf="@id/imageView9"
+        app:layout_constraintTop_toTopOf="@id/imageView9"
+        app:layout_constraintWidth_percent="0.45"
+        app:srcCompat="@drawable/water" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="0dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="@id/imageView9"
+        app:layout_constraintStart_toEndOf="@id/imageView10"
+        app:layout_constraintTop_toTopOf="@id/imageView9"
+        app:layout_constraintWidth_percent="0.45"
+        app:srcCompat="@drawable/boots" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Ваша активность за последние 7 дней:"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView9" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewStepsHistory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/orange"
+        app:itemIconTint="@drawable/bottom_nav_item_color_selector"
+        app:itemTextColor="@drawable/bottom_nav_item_color_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:itemIconSize="42dp"
+        app:menu="@menu/bottom_navigation_menu"
+        style="@style/Widget.App.BottomNavigationView" />
+
+    <TextView
+        android:id="@+id/textViewChallen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:text="Челенджи:"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewStepsHistory" />
+
+    <!-- Challenge Icons -->
+    <!-- Ensure even distribution and adaptability by using bias and percentage widths -->
+    <ImageView
+        android:id="@+id/chel1"
+        android:layout_width="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/chel2"
+        app:layout_constraintTop_toBottomOf="@id/textViewChallen"
+        app:srcCompat="@drawable/challenge1" />
+
+    <ImageView
+        android:id="@+id/chel2"
+        android:layout_width="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.33"
+        app:layout_constraintStart_toEndOf="@id/chel1"
+        app:layout_constraintEnd_toStartOf="@id/chel3"
+        app:layout_constraintTop_toBottomOf="@id/textViewChallen"
+        app:srcCompat="@drawable/challenge2" />
+
+    <ImageView
+        android:id="@+id/chel3"
+        android:layout_marginTop="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.33"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/chel2"
+        app:layout_constraintTop_toBottomOf="@id/textViewChallen"
+        app:srcCompat="@drawable/challenge3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="279dp"
+        android:text="Сегодняшняя цель"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView10"
+        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="@+id/imageView9"
+        app:layout_constraintVertical_bias="0.589" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

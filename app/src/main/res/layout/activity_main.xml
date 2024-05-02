@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Регистрация"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <!-- Поле для ввода имени пользователя -->
+    <ImageView
+        android:id="@+id/usernameTextBox"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/textbox" />
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="#FFFFFF"
+        android:hint="Имя пользователя"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/usernameTextBox"
+        app:layout_constraintStart_toStartOf="@+id/usernameTextBox"
+        app:layout_constraintTop_toTopOf="@+id/usernameTextBox" />
+
+    <!-- Поле для ввода email -->
+    <ImageView
+        android:id="@+id/emailTextBox"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameTextBox"
+        app:srcCompat="@drawable/textbox" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="#FFFFFF"
+        android:hint="Email"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/emailTextBox"
+        app:layout_constraintStart_toStartOf="@+id/emailTextBox"
+        app:layout_constraintTop_toTopOf="@+id/emailTextBox" />
+
+    <!-- Поле для ввода номера телефона -->
+    <ImageView
+        android:id="@+id/phoneTextBox"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailTextBox"
+        app:srcCompat="@drawable/textbox" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="#FFFFFF"
+        android:hint="Номер телефона"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/phoneTextBox"
+        app:layout_constraintStart_toStartOf="@+id/phoneTextBox"
+        app:layout_constraintTop_toTopOf="@+id/phoneTextBox" />
+
+    <!-- Поле для ввода пароля -->
+    <ImageView
+        android:id="@+id/passwordTextBox"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneTextBox"
+        app:srcCompat="@drawable/textbox" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="#FFFFFF"
+        android:hint="Пароль"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/passwordTextBox"
+        app:layout_constraintStart_toStartOf="@+id/passwordTextBox"
+        app:layout_constraintTop_toTopOf="@+id/passwordTextBox" />
+
+    <!-- Кнопка для входа -->
+    <Button
+        android:id="@+id/buttonRegister"
+
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/orange"
+        android:text="Вход"
+        android:textColor="@color/white"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTextBox"
+        app:layout_constraintVertical_bias="0.157" />
+
+    <TextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Уже есть аккаунт? Войти"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextEmail"
+        app:layout_constraintStart_toStartOf="@+id/emailTextBox"
+        app:layout_constraintTop_toTopOf="@+id/emailTextBox"
+        app:srcCompat="@drawable/email" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextPassword"
+        app:layout_constraintHorizontal_bias="0.611"
+        app:layout_constraintStart_toStartOf="@+id/passwordTextBox"
+        app:layout_constraintTop_toTopOf="@+id/passwordTextBox"
+        app:srcCompat="@drawable/lock" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextPhone"
+        app:layout_constraintStart_toStartOf="@+id/phoneTextBox"
+        app:layout_constraintTop_toTopOf="@+id/phoneTextBox"
+        app:srcCompat="@drawable/phone" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextUsername"
+        app:layout_constraintStart_toStartOf="@+id/usernameTextBox"
+        app:layout_constraintTop_toTopOf="@+id/usernameTextBox"
+        app:srcCompat="@drawable/profile" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
